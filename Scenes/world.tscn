@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://dqnfnv4426txc"]
+
+[ext_resource type="Texture2D" uid="uid://dg35dtsx8p7aw" path="res://Art/BG.png" id="1_csmih"]
+[ext_resource type="Script" path="res://Scripts/world.gd" id="1_wpo2r"]
+[ext_resource type="PackedScene" uid="uid://nlxc7fpud8rq" path="res://Scenes/Player1.tscn" id="1_yprpr"]
+[ext_resource type="PackedScene" uid="uid://cpc6t4jjw17qn" path="res://Scenes/Player2.tscn" id="3_x8mab"]
+[ext_resource type="PackedScene" uid="uid://bdqnxujcunplq" path="res://Scenes/Ball.tscn" id="4_cx7mr"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_wpo2r")
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(1280, 800)
+scale = Vector2(1, 1)
+texture = ExtResource("1_csmih")
+metadata/_edit_lock_ = true
+
+[node name="Player1" parent="." instance=ExtResource("1_yprpr")]
+position = Vector2(50, 800)
+
+[node name="Player2" parent="." instance=ExtResource("3_x8mab")]
+position = Vector2(2510, 800)
+
+[node name="Ball" parent="." instance=ExtResource("4_cx7mr")]
+position = Vector2(1280, 800)
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(1280, 800)
+metadata/_edit_lock_ = true
+
+[node name="Left" type="Label" parent="."]
+offset_left = 1206.0
+offset_top = 99.0
+offset_right = 1228.0
+offset_bottom = 122.0
+scale = Vector2(2, 2)
+text = "0
+"
+
+[node name="Right" type="Label" parent="."]
+offset_left = 1331.0
+offset_top = 97.0
+offset_right = 1351.0
+offset_bottom = 120.0
+scale = Vector2(2, 2)
+text = "0"
