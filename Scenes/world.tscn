@@ -11,7 +11,6 @@ script = ExtResource("1_wpo2r")
 
 [node name="Bg" type="Sprite2D" parent="."]
 position = Vector2(1280, 800)
-scale = Vector2(1, 1)
 texture = ExtResource("1_csmih")
 metadata/_edit_lock_ = true
 
